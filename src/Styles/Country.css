@@ -1,0 +1,86 @@
+.Country{
+    width: 90vw;
+    margin: auto;
+}
+
+.Country > div:nth-child(1){
+    width: 90%;
+    margin: auto;
+    /* border: 2px solid red; */
+    text-align: center;
+    padding: 3rem;
+}
+
+.Country > div:nth-child(1) > input{
+    width: 50%;
+    margin: auto;
+    height: 3rem;
+    text-align: center;
+}
+
+.Country > div:nth-child(2){
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.Country > div:nth-child(3){
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    /* border: 2px solid red; */
+}
+
+.Country > div:nth-child(3) > button{
+    border: none;
+    padding: 1rem;
+    margin-left: 10px;
+    background-color: rgb(85, 85, 203);
+    color: white;
+    border-radius: 0.5rem;
+    transition: 1s;
+}
+
+.Country > div:nth-child(3) > button:hover{
+    cursor: pointer;
+    background-color: rgb(225, 155, 25);
+}
+
+@media (min-width: 699px) and (max-width: 999px) {
+
+    .Country > div:nth-child(1){
+        width: 90%;
+        margin: auto;
+        /* border: 2px solid red; */
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .Country > div:nth-child(2){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        text-align: center;
+    }
+  }
+
+  @media (min-width: 10px) and (max-width: 698px) {
+
+    .Country > div:nth-child(1){
+        width: 90%;
+        margin: auto;
+        /* border: 2px solid red; */
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .Country > div:nth-child(2){
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+  }
