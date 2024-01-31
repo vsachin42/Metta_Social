@@ -12,7 +12,10 @@ const Country = () => {
    let [findCurrencyData, setFindCurrencyData] = useState(false);
    const [loading, setLoading] = useState(true);
 
-   const handleChange = e => setCurrency(e.target.value);
+   const handleChange = e => {
+    setCurrency(e.target.value);
+    setLoading(true);
+   };
 
    const getData = () => {
    if(currency){
@@ -55,7 +58,7 @@ const handlePage = (val) => {
        <div>
             {loading ? <h1>Loading...</h1> : ""}
             {
-                data.length > 0 && data.map((el) => {
+              !loading && data.length > 0 && data.map((el) => {
                     return <div key={el.name.common}>
                         <img src={el.flags.png} alt={el.name.common}/>
                         <p>Country's Name: {el.name.common}</p>
@@ -65,7 +68,7 @@ const handlePage = (val) => {
                 })
             }
             {
-                data.length === 0 && countries.length > 0 && countries.map((el,index) => {
+               !loading && data.length === 0 && countries.length > 0 && countries.map((el,index) => {
                    if(index >= (page-1)*10 && index <= (page*10)-1){
                     return <div key={el.name.common}>
                     <img src={el.flags.png} alt={el.name.common}/>

@@ -1,0 +1,27 @@
+.navbar{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgb(25,26,38);
+}
+
+
+.navbar a{
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 1s;
+    font-size: 18px;
+}
+
+.navbar a:hover{
+    color: teal;
+}
+
+@media only screen and (max-width: 600px){
+
+    .details > ul{
+        display: block;
+    }
+}

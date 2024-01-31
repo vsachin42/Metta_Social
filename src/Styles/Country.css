@@ -30,6 +30,15 @@
 .Country > div:nth-child(2) > h1{
     width: 70%;
     margin: auto;
+    color: teal
+}
+
+.Country > div:nth-child(2) > div{
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.Country > div:nth-child(2) > div > img{
+    width: 100%;
 }
 
 .Country > div:nth-child(3){
