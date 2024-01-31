@@ -11,3 +11,4 @@ Feactures -->
 Pagination
 Debouncing
 Responsive
+Loading Screen

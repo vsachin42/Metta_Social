@@ -27,6 +27,11 @@
     text-align: center;
 }
 
+.Country > div:nth-child(2) > h1{
+    width: 70%;
+    margin: auto;
+}
+
 .Country > div:nth-child(3){
     width: 90%;
     margin: auto;

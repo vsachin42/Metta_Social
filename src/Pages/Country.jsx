@@ -10,6 +10,7 @@ const Country = () => {
    const [countries, setCountries] = useState([]);
    const [page, setPage] = useState(1);
    let [findCurrencyData, setFindCurrencyData] = useState(false);
+   const [loading, setLoading] = useState(true);
 
    const handleChange = e => setCurrency(e.target.value);
 
@@ -18,6 +19,7 @@ const Country = () => {
     axios.get(`https://restcountries.com/v3.1/currency/${currency.toLowerCase()}`).then((res) => {
         setData(res.data);
         setFindCurrencyData(true);
+        setLoading(false);
        }).catch((err) => {
            setData([]);
            setFindCurrencyData(false);
@@ -29,6 +31,7 @@ const Country = () => {
    }
    axios.get("https://restcountries.com/v3.1/all").then((res) => {
         setCountries(res.data);
+        setLoading(false);
        }).catch((err) => {
         console.log(err);
        })
@@ -44,13 +47,13 @@ const handlePage = (val) => {
       getData();
    }, [debounceValue, page, findCurrencyData]);
 
-
   return (
     <div className='Country'>
        <div>
        <input type="text" placeholder='Search By currency INR,EUR' value={currency} onChange={handleChange}/>
        </div>
        <div>
+            {loading ? <h1>Loading...</h1> : ""}
             {
                 data.length > 0 && data.map((el) => {
                     return <div key={el.name.common}>
