@@ -6,7 +6,7 @@ import { useDebounce } from '../Hooks/useDebounce';
 const Country = () => {
    const [currency, setCurrency] = useState("");
    const [data, setData] = useState([]);
-   const debounceValue = useDebounce(currency,1500);
+   const debounceValue = useDebounce(currency,1000);
    const [countries, setCountries] = useState([]);
    const [page, setPage] = useState(1);
    let [findCurrencyData, setFindCurrencyData] = useState(false);
